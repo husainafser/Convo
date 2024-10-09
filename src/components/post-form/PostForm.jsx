@@ -50,7 +50,7 @@ export default function PostForm({ post }) {
                 try {
                     dispatch(fetchPostStart());
                     console.log(userData);
-                    const dbPost = await service.createPost({ ...data, userId: userData.userData.$id });
+                    const dbPost = await service.createPost({ ...data, userId: userData.$id });
                 if (dbPost) {
                     dispatch(fetchPostSuccess(dbPost));
                     toast.success('Your post added !');
