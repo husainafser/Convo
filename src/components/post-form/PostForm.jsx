@@ -57,6 +57,7 @@ export default function PostForm({ post }) {
                 }
                 } catch (error) {
                     dispatch(fetchPostFailure(error.message));
+                    console.log(error.message);
                     toast.error('Something went wrong !');
                 }
                 
