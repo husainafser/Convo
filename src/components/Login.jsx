@@ -22,9 +22,9 @@ const Login = ()=>{
             const session  = await authService.login(data);
             if(session){
                 const userData = await authService.getCurrentUser();
-                // console.log(userData);
                 if(userData){
-                    dispatch(storeLogin({userData:userData}));
+                  console.log(userData);
+                    dispatch(storeLogin({userData}));
                     setloading(false);
                     navigate("/");
                     toast.success("Welcome Back !", {
